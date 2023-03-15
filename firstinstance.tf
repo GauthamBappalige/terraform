@@ -11,3 +11,11 @@ resource "aws_instance" "terraform" {
   }
 
 }
+resource "aws_s3_bucket" "b" {
+  bucket = "terraform007"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
